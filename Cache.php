@@ -3,13 +3,22 @@
 class Cache
 {
     public $data  = array();
-    function put($argKey, $argValue)
-    {
-        $this->data[$argKey] = $argValue;
+    public function __constract(){
 
     }
-
-    function get($key)
+    /**
+    *   @param $argKey , $argValue
+    *
+    */
+    public function put($argKey, $argValue)
+    {
+        $this->data[$argKey] = $argValue;
+    }
+    
+    /**
+    *    @param $key
+    */
+    public function get($key)
     {
         if(array_key_exists($key, $this->data) ){
             return  $this->data[$key];    
@@ -17,12 +26,13 @@ class Cache
         else{
             return null;
         }
-
             
-
     }
-
-    function remove($key)
+    
+    /**
+    *    @param $key
+    */
+    public function remove($key)
     {
         if(array_key_exists($key, $this->data) ){
             unset($this->data[$key]);
@@ -34,9 +44,4 @@ class Cache
 
     }
     
-
-
-
-
-
 }

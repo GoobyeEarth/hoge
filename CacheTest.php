@@ -2,7 +2,7 @@
 require "Cache.php";
 class CacheTest extends PHPUnit_Framework_TestCase
 {
-    function test_push1()
+    function test_push()
     {
         $cache = new Cache();
         $cache->put("test", "test2"); 
@@ -42,7 +42,7 @@ class CacheTest extends PHPUnit_Framework_TestCase
         $this->assertEquals("value", $cache->data[1]);
         $this->assertEquals("value4", $cache->get(3));
         var_dump($cache->data);
-}
+    }
     
     function test_remove(){
         $cache = new Cache();
