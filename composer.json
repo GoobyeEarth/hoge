@@ -1,0 +1,13 @@
+{
+    "name": "aberin/hoge",
+    "description": "this is a test",
+    "require": {
+        "phpunit/phpunit": "4.8.24"
+    },
+    "authors": [
+        {
+            "name": "aberin",
+            "email": "rintaro.abe@mkt-apps.com"
+        }
+    ]
+}
