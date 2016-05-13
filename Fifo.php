@@ -1,6 +1,6 @@
 <?php
 
-class Cache
+class Fifo
 {
     private  $data  = array();
     public function __constract(){

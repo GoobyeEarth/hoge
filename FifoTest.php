@@ -1,13 +1,13 @@
 <?php
-require "Cache.php";
-class CacheTest extends PHPUnit_Framework_TestCase
+require "Fifo.php";
+class FifoTest extends PHPUnit_Framework_TestCase
 {
     /**
     *
     * this test includes post test;
     */
     function test_get(){
-        $cache = new Cache();
+        $cache = new Fifo();
         $cache->put("key", "value");
         $cache->put("key2", "value2");
         $cache->put("key2", "value3");
@@ -19,7 +19,7 @@ class CacheTest extends PHPUnit_Framework_TestCase
     
     
     function test_remove(){
-        $cache = new Cache();
+        $cache = new Fifo();
         $cache->put("key", "value");
         $cache->put("key2", "value2");
         $cache->put("key3", "value3");
