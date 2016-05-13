@@ -7,7 +7,7 @@ class CacheTest extends PHPUnit_Framework_TestCase
     * this test includes post test;
     */
     function test_get(){
-        $cache = new Cache();
+        $cache = new Cache(10);
         $cache->put("key", "value");
         $cache->put("key2", "value2");
         $cache->put("key2", "value3");
@@ -19,7 +19,7 @@ class CacheTest extends PHPUnit_Framework_TestCase
     
     
     function test_remove(){
-        $cache = new Cache();
+        $cache = new Cache(10);
         $cache->put("key", "value");
         $cache->put("key2", "value2");
         $cache->put("key3", "value3");
@@ -33,7 +33,8 @@ class CacheTest extends PHPUnit_Framework_TestCase
 
         $bool = $cache->remove("key4");
         $this->assertFalse($bool);
-
+        
     }
+
 
 }
